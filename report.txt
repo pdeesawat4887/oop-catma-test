@@ -1,40 +1,13 @@
-   NO   	         DOMAIN         	    PROTOCOL     	     STATUS     	     REASON     
---------	------------------------	-----------------	----------------	----------------
-   1    	    derickrethans.nl    	     HTTPS      	Could not connect to page.	Could not connect to page.
-   1    	    derickrethans.nl    	      HTTP      	Could not connect to page.	Could not connect to page.
---------	------------------------	-----------------	----------------	----------------
-   2    	    derickrethans.nl    	     HTTPS      	Could not connect to page.	Could not connect to page.
-   2    	    derickrethans.nl    	      HTTP      	Could not connect to page.	Could not connect to page.
---------	------------------------	-----------------	----------------	----------------
-   3    	    derickrethans.nl    	     HTTPS      	Could not connect to page.	Could not connect to page.
-   3    	    derickrethans.nl    	      HTTP      	Could not connect to page.	Could not connect to page.
---------	------------------------	-----------------	----------------	----------------
-   4    	    derickrethans.nl    	     HTTPS      	Could not connect to page.	Could not connect to page.
-   4    	    derickrethans.nl    	      HTTP      	Could not connect to page.	Could not connect to page.
---------	------------------------	-----------------	----------------	----------------
-   5    	    derickrethans.nl    	     HTTPS      	Could not connect to page.	Could not connect to page.
-   5    	    derickrethans.nl    	      HTTP      	Could not connect to page.	Could not connect to page.
---------	------------------------	-----------------	----------------	----------------
-   6    	    derickrethans.nl    	     HTTPS      	Could not connect to page.	Could not connect to page.
-   6    	    derickrethans.nl    	      HTTP      	Could not connect to page.	Could not connect to page.
---------	------------------------	-----------------	----------------	----------------
-   7    	    derickrethans.nl    	     HTTPS      	Could not connect to page.	Could not connect to page.
-   7    	    derickrethans.nl    	      HTTP      	Could not connect to page.	Could not connect to page.
---------	------------------------	-----------------	----------------	----------------
-   NO   	         DOMAIN         	    PROTOCOL     	         STATUS         	         REASON         
---------	------------------------	-----------------	------------------------	------------------------
-   1    	    derickrethans.nl    	     HTTPS      	Could not connect to page.	Could not connect to page.
-   1    	    derickrethans.nl    	      HTTP      	Could not connect to page.	Could not connect to page.
---------	------------------------	-----------------	    ----------------    	    ----------------    
-   2    	    derickrethans.nl    	     HTTPS      	Could not connect to page.	Could not connect to page.
-   2    	    derickrethans.nl    	      HTTP      	Could not connect to page.	Could not connect to page.
---------	------------------------	-----------------	    ----------------    	    ----------------    
-   3    	    derickrethans.nl    	     HTTPS      	Could not connect to page.	Could not connect to page.
-   3    	    derickrethans.nl    	      HTTP      	Could not connect to page.	Could not connect to page.
---------	------------------------	-----------------	    ----------------    	    ----------------    
-   4    	    derickrethans.nl    	     HTTPS      	Could not connect to page.	Could not connect to page.
-   4    	    derickrethans.nl    	      HTTP      	Could not connect to page.	Could not connect to page.
---------	------------------------	-----------------	    ----------------    	    ----------------    
-   5    	    derickrethans.nl    	     HTTPS      	Could not connect to page.	Could not connect to page.
-   5    	    derickrethans.nl    	      HTTP      	Could not connect to page.	Could not connect to page.
---------	------------------------	-----------------	    ----------------    	    ----------------    
+ NO 	         DOMAIN         	    PROTOCOL     	         STATUS         	         REASON         	       PING       
+----	------------------------	-----------------	------------------------	------------------------	------------------
+ 1  	    www.youtube.com     	     HTTPS      	          200           	           OK           	     Active     
+ 1  	    www.youtube.com     	      HTTP      	          200           	           OK           	     Active     
+ 1  	       github.com       	     HTTPS      	Could not connect to page.	Could not connect to page.	Check server first
+ 1  	       github.com       	      HTTP      	Could not connect to page.	Could not connect to page.	Check server first
+ 1  	      facebook.com      	     HTTPS      	          200           	           OK           	     Active     
+ 1  	      facebook.com      	      HTTP      	          200           	           OK           	     Active     
+ 1  	     www.gmail.com      	     HTTPS      	          200           	           OK           	     Active     
+ 1  	     www.gmail.com      	      HTTP      	          200           	           OK           	     Active     
+----	------------------------	-----------------	    ----------------    	    ----------------    	------------------
+ 2  	    www.youtube.com     	     HTTPS      	          200           	           OK           	     Active     
+ 2  	    www.youtube.com     	      HTTP      	          200           	           OK           	     Active     
