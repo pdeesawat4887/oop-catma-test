@@ -11,3 +11,7 @@
 ----	------------------------	-----------------	    ----------------    	    ----------------    	------------------
  2  	    www.youtube.com     	     HTTPS      	          200           	           OK           	     Active     
  2  	    www.youtube.com     	      HTTP      	          200           	           OK           	     Active     
+ 2  	       github.com       	     HTTPS      	Could not connect to page.	Could not connect to page.	Check server first
+ 2  	       github.com       	      HTTP      	Could not connect to page.	Could not connect to page.	Check server first
+ 2  	      facebook.com      	     HTTPS      	          200           	           OK           	     Active     
+ 2  	      facebook.com      	      HTTP      	          200           	           OK           	     Active     
