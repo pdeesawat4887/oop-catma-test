@@ -31,16 +31,16 @@ class Webservice:
     #     self.reason = res_http.reason
     #     res_http.close()
 
-    def checkStatusHTTPS(self):
+    def checkStatusHTTPS(self, protocol):
         try:
-            res_https = requests.get('https://' + self.url, headers=Webservice.headers)
+            res_https = requests.get(protocol + self.url, headers=Webservice.headers)
             self.status = res_https.status_code
             self.reason = res_https.reason
             res_https.close()
         except Exception as ex:
             self.error_here()
-            self.status = 'ERROR'
-            self.reason = 'ERROR'
+            self.status = 'Could not connect to page.'
+            self.reason = 'Could not connect to page.'
 
     # @staticmethod
     def error_here(self):
@@ -86,6 +86,8 @@ Webservice.writeReport('report.txt', '--------', '------------------------', '--
 
 # Webservice.readURL(raw_input('Enter text file that contain list of host: '))
 
+protocols = ['https://', 'http://']
+
 obj = list()
 for i in range(len(Webservice.host_list)):
     obj.append(Webservice(Webservice.host_list[i]))
@@ -95,14 +97,25 @@ def run():
     threading.Timer(10.0, run).start()
 
     for i in obj:
+        for protocol in protocols:
+            i.checkStatusHTTPS(protocol)
+            p_protocol = 'HTTPS' if protocol == 'https://' else 'HTTP'
+            Webservice.writeReport('report.txt', Webservice.num, i.url, p_protocol, i.status, i.reason)
         # i.createConnection()
         # i.checkStatusHTTP()
         # Webservice.writeReport('report.txt', Webservice.num, i.url,Webservice.HTTP, i.status, i.reason)
-        i.checkStatusHTTPS()
-        Webservice.writeReport('report.txt', Webservice.num, i.url, Webservice.HTTPS, i.status, i.reason)
+        # i.checkStatusHTTPS()
+        # Webservice.writeReport('report.txt', Webservice.num, i.url, Webservice.HTTPS, i.status, i.reason)
         # print Webservice.num, i.url, i.status, i.reason
 
     Webservice.num += 1
+    Webservice.writeReport('report.txt', '--------', '------------------------', '-----------------',
+                           '----------------',
+                           '----------------')
 
 
 run()
+
+#
+# for protocol in protocols:
+#     print protocol + 'google.com'

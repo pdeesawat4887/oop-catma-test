@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df473cc6-2171-4509-adcf-39e277df3296" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/header-info.py" beforeDir="false" afterPath="$PROJECT_DIR$/header-info.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myWeb-test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/host.txt" beforeDir="false" afterPath="$PROJECT_DIR$/host.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myTest-oop.py" beforeDir="false" afterPath="$PROJECT_DIR$/myTest-oop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/report.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,18 +19,19 @@
     <SUITE FILE_PATH="coverage/oop_catma_test1$test_library.coverage" NAME="test-library Coverage Results" MODIFIED="1529651308667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/oop_catma_test1$hello.coverage" NAME="hello Coverage Results" MODIFIED="1529651521741" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/oop_catma_test1$header_info_2.coverage" NAME="header-info 2 Coverage Results" MODIFIED="1529658018123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/oop_catma_test1$myTest_oop.coverage" NAME="myTest-oop Coverage Results" MODIFIED="1529660997537" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/oop_catma_test1$myTest_oop.coverage" NAME="myTest-oop Coverage Results" MODIFIED="1529894026836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/oop_catma_test1$myWeb_test.coverage" NAME="myWeb-test Coverage Results" MODIFIED="1529895559813" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/oop_catma_test1$header_info.coverage" NAME="header-info Coverage Results" MODIFIED="1529659705119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.3966216">
+    <splitter split-orientation="horizontal" split-proportion="0.17712419">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="header-info.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/header-info.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="25" />
+                <state relative-caret-position="345">
+                  <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
                 </state>
               </provider>
             </entry>
@@ -45,8 +50,8 @@
           <file leaf-file-name="header-info 2.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/header-info 2.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="45">
-                  <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+                <state relative-caret-position="30">
+                  <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
                   <folding>
                     <element signature="e#0#14#0" expanded="true" />
                   </folding>
@@ -71,17 +76,34 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file leaf-file-name="myTest-oop.py" pinned="false" current-in-tab="true">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="myTest-oop.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/myTest-oop.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="325">
-                  <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+                <state relative-caret-position="162">
+                  <caret line="97" lean-forward="true" selection-end-line="121" />
                   <folding>
                     <element signature="e#0#14#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="myWeb-test.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/myWeb-test.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="284">
+                  <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
+                  <folding>
+                    <element signature="e#1#16#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="host.txt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/host.txt">
+              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
         </leaf>
@@ -112,6 +134,8 @@
         <option value="$PROJECT_DIR$/header-info 2.py" />
         <option value="$PROJECT_DIR$/header-info.py" />
         <option value="$PROJECT_DIR$/myTest-oop.py" />
+        <option value="$PROJECT_DIR$/host.txt" />
+        <option value="$PROJECT_DIR$/myWeb-test.py" />
       </list>
     </option>
   </component>
@@ -130,10 +154,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="89" />
     <option name="y" value="22" />
-    <option name="width" value="1680" />
-    <option name="height" value="981" />
+    <option name="width" value="1591" />
+    <option name="height" value="982" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -158,6 +183,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RunDashboard">
@@ -172,7 +198,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.myTest-oop">
+  <component name="RunManager" selected="Python.myWeb-test">
     <configuration name="header-info 2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="oop-catma-test1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -249,7 +275,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="test-library" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="myWeb-test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="oop-catma-test1" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -262,26 +288,26 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test-library.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/myWeb-test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.test-library" />
       <item itemvalue="Python.hello" />
       <item itemvalue="Python.header-info" />
       <item itemvalue="Python.header-info 2" />
       <item itemvalue="Python.myTest-oop" />
+      <item itemvalue="Python.myWeb-test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.myWeb-test" />
         <item itemvalue="Python.myTest-oop" />
         <item itemvalue="Python.header-info" />
         <item itemvalue="Python.header-info 2" />
         <item itemvalue="Python.hello" />
-        <item itemvalue="Python.test-library" />
       </list>
     </recent_temporary>
   </component>
@@ -324,34 +350,42 @@
       <option name="project" value="LOCAL" />
       <updated>1529659556606</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="separate http and https connection.">
+      <created>1529892185078</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1529892185078</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="23" width="1680" height="981" extended-state="6" />
+    <frame x="0" y="22" width="1680" height="981" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50476193" side_tool="true" visible="true" weight="0.25799337" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50535715" side_tool="true" visible="true" weight="0.25799337" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Python Console" order="11" sideWeight="0.49928573" weight="0.3298731" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4952381" weight="0.2590959" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49464285" visible="true" weight="0.25799337" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11904762" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08928572" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" id="R Graphics" order="4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" id="R Packages" order="6" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="R Graphics" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
     </layout>
   </component>
@@ -365,9 +399,46 @@
     <MESSAGE value="hello CAT" />
     <MESSAGE value="header-info" />
     <MESSAGE value="reformat" />
-    <option name="LAST_COMMIT_MESSAGE" value="reformat" />
+    <MESSAGE value="separate http and https connection." />
+    <option name="LAST_COMMIT_MESSAGE" value="separate http and https connection." />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/header-info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header-info 2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/herader-info2.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hello.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myTest-oop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/header-info.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -404,13 +475,11 @@
     <entry file="file://$PROJECT_DIR$/herader-info2.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/header-info2.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/header-info2.py" />
     <entry file="file://$PROJECT_DIR$/header-info 2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        <state relative-caret-position="30">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -433,19 +502,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/header-info.py">
+    <entry file="file://$PROJECT_DIR$/myTest-oop.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="25" />
+        <state relative-caret-position="162">
+          <caret line="97" lean-forward="true" selection-end-line="121" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myTest-oop.py">
+    <entry file="file://$PROJECT_DIR$/header-info.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+        <state relative-caret-position="345">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/host.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myWeb-test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#1#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
