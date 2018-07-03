@@ -1,5 +1,5 @@
+import sys
 import MySQLdb
-
 
 class mysqlUserDb:
     # warnings.filterwarnings('error')
@@ -20,31 +20,6 @@ class mysqlUserDb:
         except MySQLdb.Error as error:
             print 'Error: %s ' % error + '\nStop.\n'
             sys.exit()
-
-    # def createdb(self, db):
-    # 	print '\nCreating database...'
-    # 	try:
-    # 		self.cursor.execute('create database if not exists ' + db)
-    # 		self.cursor.execute('show databases like ' + '\'' + db + '\'')
-    # 		dbs = self.cursor.fetchone()
-    # 		print 'Database created: %s' %dbs
-    # 	except Warning as warn:
-    # 		print 'Warning: %s ' %warn  + '\nStop.\n'
-    # 		sys.exit()
-
-    # def grants(self, user, userpass, db):
-    # 	print '\nGrant privilegies... '
-    # 	try:
-    # 		self.cursor.execute('grant all on ' + db + '.*' + 'to ' + '\'' + user + '\'' + "@'localhost'" + 'identified by ' + '\'' + userpass + '\'')
-    # 		self.cursor.execute('select user, db from mysql.db where db=' + '\'' + db + '\'')
-    # 		grs = self.cursor.fetchall()
-    # 		print 'Access granted: %r' %grs
-    # 	except Warning as warn:
-    # 		print 'Warning: %s ' %warn  + '\nStop.\n'
-    # 		sys.exit()
-    # 	except MySQLdb.Error as error:
-    # 		print 'Error: %s ' %error + '\nStop.\n'
-    # 		sys.exit()
 
     def createtable(self, table):
         print '\nCreating table...'
@@ -103,3 +78,23 @@ mySQL_new = mysqlUserDb()
 mySQL_new.query('example', '', '')
 # mySQL_new.createtable('example')
 del mySQL_new
+
+
+from easysnmp import Session
+class Simplesnmp:
+
+    def __init__(self, hostname, community, version):
+        self.hostname = hostname
+        self.community = community
+        self.version = version
+        self.session = Session(hostname=self.hostname, community=self.community, version=self.version)
+
+    def snmpwalk(self, oid):
+        self.items = self.session.walk(oid)
+        return self.items
+
+manager = Simplesnmp('192.168.40.1', 'cisco', 2)
+manager.snmpwalk('1.3.6.1.2.1.1.1')
+for it in manager.items:
+    print it.value
+
