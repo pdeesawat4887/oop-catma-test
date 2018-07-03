@@ -1,6 +1,7 @@
 import sys
 import MySQLdb
 
+
 class mysqlUserDb:
     # warnings.filterwarnings('error')
 
@@ -73,28 +74,55 @@ class mysqlUserDb:
         self.db.close()
         print 'Done.\n'
 
-mySQL_new = mysqlUserDb()
-# mySQL_new.insert('example', 'R112', 'conected to R2')
-mySQL_new.query('example', '', '')
-# mySQL_new.createtable('example')
-del mySQL_new
-
 
 from easysnmp import Session
+
+
 class Simplesnmp:
 
     def __init__(self, hostname, community, version):
         self.hostname = hostname
         self.community = community
         self.version = version
-        self.session = Session(hostname=self.hostname, community=self.community, version=self.version)
+        self.session = Session(hostname=self.hostname,
+                               community=self.community, version=self.version)
 
     def snmpwalk(self, oid):
-        self.items = self.session.walk(oid)
-        return self.items
+        items = self.session.walk(oid)
+        return items
+
+mySQL_new = mysqlUserDb()
+# mySQL_new.insert('example', 'R112', 'conected to R2')
+# mySQL_new.query('example', '', '')
+# mySQL_new.createtable('example')
+
 
 manager = Simplesnmp('192.168.40.1', 'cisco', 2)
-manager.snmpwalk('1.3.6.1.2.1.1.1')
-for it in manager.items:
-    print it.value
+temp_desc = manager.snmpwalk('1.3.6.1.2.1.1.1')
+temp_ho = manager.snmpwalk('1.3.6.1.4.1.9.2.1.3')
+temp_sys = manager.snmpwalk('system')
 
+temp_list =[]
+
+for it in temp_sys:
+    temp_list.append(it.value)
+
+print temp_list
+
+print len(temp_list)
+for i in temp_list:
+    print i
+# print len(temp_desc[0].value)
+
+# print (temp_des[0].value)
+
+# mySQL_new.insert('example', temp_ho[0].value, temp_desc[0].value)
+
+# mySQL_new.query('example', '', 'cisco')
+
+del mySQL_new
+
+# print manager.items.value()
+
+# for it in temp_desc:
+#     print it.value
