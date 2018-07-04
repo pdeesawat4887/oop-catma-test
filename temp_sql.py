@@ -80,7 +80,10 @@ from easysnmp import Session
 
 class Simplesnmp:
 
-    def __init__(self, hostname, community, version):
+    def __init__(self, hostname, community, version, temp_sysDesc=None, temp_hostname=None, temp_totalInt=None,
+                 temp_MemUse=None, temp_MemFree=None, temp_NvramSize=None, temp_NvramUse=None, temp_Power=None,
+                 temp_Vol=None):
+        self.temp = [temp_sysDesc, temp_hostname, temp_totalInt, temp_MemUse, temp_MemFree, temp_NvramSize, temp_NvramUse, temp_Power, temp_Vol]
         self.hostname = hostname
         self.community = community
         self.version = version
@@ -91,38 +94,61 @@ class Simplesnmp:
         items = self.session.walk(oid)
         return items
 
-mySQL_new = mysqlUserDb()
-# mySQL_new.insert('example', 'R112', 'conected to R2')
-# mySQL_new.query('example', '', '')
-# mySQL_new.createtable('example')
 
+class FileOperation:
 
-manager = Simplesnmp('192.168.40.1', 'cisco', 2)
-temp_desc = manager.snmpwalk('1.3.6.1.2.1.1.1')
-temp_ho = manager.snmpwalk('1.3.6.1.4.1.9.2.1.3')
-temp_sys = manager.snmpwalk('system')
+    def __init__(self):
+        self.oid_list = []
 
-temp_list =[]
+    def readFile(self, filename):
+        with open(filename, 'r+') as file:
+            temp_file = file.read()
+            self.oid_list = temp_file.split()
+            file.close()
+            return self.oid_list
 
-for it in temp_sys:
-    temp_list.append(it.value)
+oid_item = FileOperation()
+oid_item.readFile('oid_list.txt')
 
-print temp_list
+print oid_item.oid_list
+print len(oid_item.oid_list)
 
-print len(temp_list)
-for i in temp_list:
-    print i
-# print len(temp_desc[0].value)
+walker = Simplesnmp('192.168.10.1', 'public', '2c')
 
-# print (temp_des[0].value)
+for unit in range(len(walker.temp)):
+    walker.temp[unit] = walker.snmpwalk(oid_item.oid_list[unit])
 
-# mySQL_new.insert('example', temp_ho[0].value, temp_desc[0].value)
-
-# mySQL_new.query('example', '', 'cisco')
-
-del mySQL_new
-
-# print manager.items.value()
-
-# for it in temp_desc:
-#     print it.value
+# mySQL_new = mysqlUserDb()
+# # mySQL_new.insert('example', 'R112', 'conected to R2')
+# # mySQL_new.query('example', '', '')
+# # mySQL_new.createtable('example')
+#
+# manager = Simplesnmp('192.168.40.1', 'cisco', 2)
+# temp_desc = manager.snmpwalk('1.3.6.1.2.1.1.1')
+# temp_ho = manager.snmpwalk('1.3.6.1.4.1.9.2.1.3')
+# temp_sys = manager.snmpwalk('system')
+#
+# temp_list =[]
+#
+# for it in temp_sys:
+#     temp_list.append(it.value)
+#
+# print temp_list
+#
+# print len(temp_list)
+# for i in temp_list:
+#     print i
+# # print len(temp_desc[0].value)
+#
+# # print (temp_des[0].value)
+#
+# # mySQL_new.insert('example', temp_ho[0].value, temp_desc[0].value)
+#
+# # mySQL_new.query('example', '', 'cisco')
+#
+# del mySQL_new
+#
+# # print manager.items.value()
+#
+# # for it in temp_desc:
+# #     print it.value
