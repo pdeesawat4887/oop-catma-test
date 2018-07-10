@@ -9,7 +9,7 @@ class mysqlUserDb:
         self.root = 'root'
         self.host = '127.0.0.1'
         self.rootpw = 'root'
-        self.db = 'test_python'
+        self.db = 'test-catma'
 
         try:
             print '\nChecking MySQL connection...'
@@ -40,6 +40,19 @@ class mysqlUserDb:
                 hostname + "', '" + description + "')"
             print sql_insert
             self.cursor.execute(sql_insert)
+            self.db.commit()
+        except Warning as warn:
+            print 'Warning: %s ' % warn + '\nStop.\n'
+            self.db.rollback()
+            sys.exit()
+
+    def r_insert(self, table, sysDesc, hostname, totalInt, MemUse, MemFree, NvramSize, NvramUse, power, vol, location):
+        try:
+            sql_insert_r = "INSERT INTO " + table + " VALUES (NULL, '" + sysDesc + "', '" + hostname + "', '" + totalInt + "', '" + \
+                MemUse + "', '" + MemFree + "', '" + NvramSize + "', '" + NvramUse + \
+                "', '" + power + "', '" + vol + "', '" + location + "')"
+            print sql_insert_r
+            self.cursor.execute(sql_insert_r)
             self.db.commit()
         except Warning as warn:
             print 'Warning: %s ' % warn + '\nStop.\n'
@@ -80,10 +93,19 @@ from easysnmp import Session
 
 class Simplesnmp:
 
-    def __init__(self, hostname, community, version, temp_sysDesc=None, temp_hostname=None, temp_totalInt=None,
-                 temp_MemUse=None, temp_MemFree=None, temp_NvramSize=None, temp_NvramUse=None, temp_Power=None,
-                 temp_Vol=None):
-        self.temp = [temp_sysDesc, temp_hostname, temp_totalInt, temp_MemUse, temp_MemFree, temp_NvramSize, temp_NvramUse, temp_Power, temp_Vol]
+    sysDesc = None
+    hostname_r = None
+    totalInt = None
+    MemUsed = None
+    MemFree = None
+    NvramSize = None
+    NvramUsed = None
+    powerSup = None
+    voltage = None
+    location = None
+
+    def __init__(self, hostname, community, version):
+        # self.temp = [temp_sysDesc, temp_hostname, temp_totalInt, temp_MemUse, temp_MemFree, temp_NvramSize, temp_NvramUse, temp_Power, temp_Vol, temp_Location]
         self.hostname = hostname
         self.community = community
         self.version = version
@@ -93,6 +115,34 @@ class Simplesnmp:
     def snmpwalk(self, oid):
         items = self.session.walk(oid)
         return items
+
+    def set_system(self, item):
+        self.sysDesc = item[0].value
+        self.hostname_r = item[4].value
+        self.location = item[5].value
+
+    def update_first(self):
+        self.sysDesc = self.session.walk('1.3.6.1.2.1.1.1')[0].value
+        self.hostname_r = self.session.walk('1.3.6.1.2.1.1.5')[0].value
+        self.totalInt = self.session.walk('1.3.6.1.2.1.2.1')[0].value
+        self.MemUsed = self.session.walk('1.3.6.1.4.1.9.9.48.1.1.1.5')[0].value
+        self.MemFree = self.session.walk('1.3.6.1.4.1.9.9.48.1.1.1.6')[0].value
+        self.NvramSize = self.session.walk('1.3.6.1.4.1.9.9.195.1.1.1.2')[0].value
+        self.NvramUsed = self.session.walk('1.3.6.1.4.1.9.9.195.1.1.1.3')[0].value
+        self.powerSup = self.session.walk('1.3.6.1.4.1.9.9.13.1.5.1.2')[0].value
+        self.voltage = self.session.walk('1.3.6.1.4.1.9.9.13.1.2.1.3')[0].value
+        self.location = self.session.walk('1.3.6.1.2.1.1.6')[0].value
+
+    # def separate(self, list):
+    #     for i in xrange(0,len(list),2):
+    #         x = list[i]
+    #         # print "X:", x
+    #         print self.session.walk(list[i+1])[0].value
+    #         vars()[x] = self.session.walk(list[i+1])[0].value
+        # print dir(list[i])
+        # print "---->", my_dict[x],"\n"
+        # print my_dict
+        # print voltage
 
 
 class FileOperation:
@@ -107,26 +157,69 @@ class FileOperation:
             file.close()
             return self.oid_list
 
-oid_item = FileOperation()
-oid_item.readFile('oid_list.txt')
+# oid_item = FileOperation()
+# oid_item.readFile('oid_list2.txt')
 
-print oid_item.oid_list
-print len(oid_item.oid_list)
+# print oid_item.oid_list
+# print len(oid_item.oid_list)
 
-walker = Simplesnmp('192.168.10.1', 'cisco', 2)
+# walker = Simplesnmp('192.168.40.1', 'cisco', 2)
+# print dir(walker)
+
+# list[i] = list[i+1]
+# exec("%s = %s" % (list[i], list[i+1]))
+# item = walker.snmpwalk('system')
+# walker.set_system(item)
+# walker.totalInt = walker.snmpwalk('1.3.6.1.2.1.2.1')[0].value
+# walker.MemUsed = walker.snmpwalk('1.3.6.1.4.1.9.9.48.1.1.1.5')[0].value
+# walker.MemFree = walker.snmpwalk('1.3.6.1.4.1.9.9.48.1.1.1.6')[0].value
+# walker.NvramSize = walker.snmpwalk('1.3.6.1.4.1.9.9.195.1.1.1.2')[0].value
+# walker.NvramUsed = walker.snmpwalk('1.3.6.1.4.1.9.9.195.1.1.1.3')[0].value
+# walker.powerSup = walker.snmpwalk('1.3.6.1.4.1.9.9.13.1.5.1.2')[0].value
+# walker.voltage = walker.snmpwalk('1.3.6.1.4.1.9.9.13.1.2.1.3')[0].value
+
+# walker.update_first()
+
+walker_2 = Simplesnmp('192.168.20.2', 'cisco', 2)
+walker_2.update_first()
+
+# alker_3 = Simplesnmp('192.168.10.2', 'cisco', 2)
+# walker_3.update_first()
+
+# print walker.hostname_r
+
+mySQL_new = mysqlUserDb()
+mySQL_new.r_insert('Router', walker.sysDesc, walker.hostname_r, walker.totalInt, walker.MemUsed,
+                   walker.MemFree, walker.NvramSize, walker.NvramUsed, walker.powerSup, walker.voltage, walker.location)
+
+# # for it in range(len(item)):
+# print("Sys: {}\nHostname: {}\nTotalInterface: {}\nMemUsed: {}\nMemFree: {}\nNVRAMSize: {}\nNVRAMUsed: {}\nPower: {}\nVoltage: {}\nLocation: {}\n").format(
+# walker.sysDesc, walker.hostname_r, walker.totalInt, walker.MemUsed,
+# walker.MemFree, walker.NvramSize, walker.NvramUsed, walker.powerSup,
+# walker.voltage, walker.location)
+
+# walker_new = Simplesnmp('192.168.20.1', 'cisco', 2)
+# print dir(walker)
+# walker.sysDesc = walker.snmpwalk('1.3.6.1.2.1.1.1')
+# print walker.sysDesc
+# print dir(walker)
+
+# print walker.temp_sysDesc
 
 # for it in range(len(oid_item.oid_list)):
 #     print oid_item.oid_list[it]
 
-for unit in range(len(walker.temp)):
-    # print walker.temp[unit] = walker.snmpwalk()
-    walker.temp[unit] = walker.snmpwalk(oid_item.oid_list[unit])
-    # print walker.snmpwalk(oid_item.oid_list[unit])
+# for unit in range(len(walker.temp)):
+#     # print walker.temp[unit] = walker.snmpwalk()
+#     walker.temp[unit] = walker.snmpwalk(oid_item.oid_list[unit])
+#     # print walker.snmpwalk(oid_item.oid_list[unit])
 
 # for it in walker.temp:
-print walker.temp[1][0].value
+#     # print '{} = {}'.format(it[0].oid, it[0].value)
+#     print it[0].value
 
 # mySQL_new = mysqlUserDb()
+# mySQL_new
 # # mySQL_new.insert('example', 'R112', 'conected to R2')
 # # mySQL_new.query('example', '', '')
 # # mySQL_new.createtable('example')
