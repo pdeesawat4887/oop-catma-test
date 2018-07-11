@@ -158,21 +158,21 @@ class FileOperation:
             return self.oid_list
 
 
-walker_r1 = Simplesnmp('192.168.40.1', 'cisco', 2)
+walker_r1 = Simplesnmp('192.168.91.41', 'public', 2)
 walker_r1.update_first()
 
-walker_r2 = Simplesnmp('192.168.10.2', 'cisco', 2)
+walker_r2 = Simplesnmp('192.168.91.46', 'public', 2)
 walker_r2.update_first()
 
-walker_r3 = Simplesnmp('192.168.20.2', 'cisco', 2)
-walker_r3.update_first()
+# walker_r3 = Simplesnmp('192.168.20.2', 'cisco', 2)
+# walker_r3.update_first()
 
-# mySQL_connection = mysqlUserDb()
-# mySQL_connection.r_insert('Router', walker_r1.sysDesc, walker_r1.hostname_r, walker_r1.totalInt, walker_r1.MemUsed,
-#                    walker_r1.MemFree, walker_r1.NvramSize, walker_r1.NvramUsed, walker_r1.powerSup, walker_r1.voltage, walker_r1.location)
+mySQL_connection = mysqlUserDb()
+mySQL_connection.r_insert('Router', walker_r1.sysDesc, walker_r1.hostname_r, walker_r1.totalInt, walker_r1.MemUsed,
+                   walker_r1.MemFree, walker_r1.NvramSize, walker_r1.NvramUsed, walker_r1.powerSup, walker_r1.voltage, walker_r1.location)
 
-# mySQL_connection.r_insert('Router', walker_r2.sysDesc, walker_r2.hostname_r, walker_r2.totalInt, walker_r2.MemUsed,
-#                    walker_r2.MemFree, walker_r2.NvramSize, walker_r2.NvramUsed, walker_r2.powerSup, walker_r2.voltage, walker_r2.location)
+mySQL_connection.r_insert('Router', walker_r2.sysDesc, walker_r2.hostname_r, walker_r2.totalInt, walker_r2.MemUsed,
+                   walker_r2.MemFree, walker_r2.NvramSize, walker_r2.NvramUsed, walker_r2.powerSup, walker_r2.voltage, walker_r2.location)
 
 # mySQL_connection.r_insert('Router', walker_r3.sysDesc, walker_r3.hostname_r, walker_r3.totalInt, walker_r3.MemUsed,
 #                    walker_r3.MemFree, walker_r3.NvramSize, walker_r3.NvramUsed, walker_r3.powerSup, walker_r3.voltage, walker_r3.location)
