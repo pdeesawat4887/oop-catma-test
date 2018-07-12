@@ -1,6 +1,6 @@
-#!/user/bin/python
+#!/usr/bin/env python
 import cgi
-print "Content-type:text/html\r\n\r\n"
+print "Content-type: text/html\n\n"
 
 print "<!DOCTYPE html>                                                                                        "
 print "<html>                                                                                                 "
