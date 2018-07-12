@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 import cgi
-print '<!DOCTYPE html>'
+
 print "Content-type: text/html\n\n"
+print '<!DOCTYPE html>'
 print '<html>'
 print '<head>'
 print '<meta charset="utf-8">'
