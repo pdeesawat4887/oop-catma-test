@@ -77,8 +77,8 @@
       <file leaf-file-name="cgi-first.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cgi-first.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+            <state relative-caret-position="210">
+              <caret line="14" column="65" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -495,7 +495,21 @@
       <option name="project" value="LOCAL" />
       <updated>1531365682445</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="test cgi python. Cheange 0.0.2">
+      <created>1531367329567</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1531367329567</updated>
+    </task>
+    <task id="LOCAL-00013" summary="test cgi python. Cheange 0.0.3">
+      <created>1531367697117</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1531367697117</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -544,7 +558,9 @@
     <MESSAGE value="combine 2 class [MySQL + EasySNMP]" />
     <MESSAGE value="test in LAB at CATMA." />
     <MESSAGE value="test cgi python." />
-    <option name="LAST_COMMIT_MESSAGE" value="test cgi python." />
+    <MESSAGE value="test cgi python. Cheange 0.0.2" />
+    <MESSAGE value="test cgi python. Cheange 0.0.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="test cgi python. Cheange 0.0.3" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/now.py">
@@ -823,8 +839,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cgi-first.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+        <state relative-caret-position="210">
+          <caret line="14" column="65" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
         </state>
       </provider>
     </entry>

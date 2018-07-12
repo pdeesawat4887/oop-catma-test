@@ -12,5 +12,7 @@ print "<body>"
 print "<h1>This is a Heading</h1>"
 print "<p>This is a paragraph.</p>"
 
+print "<input class="input" type="text" placeholder="Text input">"
+
 print "</body>"
 print "</html>"
